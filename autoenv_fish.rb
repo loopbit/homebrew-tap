@@ -12,6 +12,10 @@ class AutoenvFish < Formula
   def caveats; <<-EOS.undent
     To finish the installation, source activate.fish in your shell:
       source #{opt_prefix}/activate.fish
+
+    If you want autoenv to be active on every new terminal window, add the 
+    previous line to your config file:
+      echo 'source #{opt_prefix}/activate.fish' >> ~/.config/fish/config.fish
     EOS
   end
 end
